@@ -1,0 +1,1 @@
+﻿To jest system do kontroli temperatury i wilgotności. Czujnik DHT22 mierzy temperaturę, a ekran LCD pokazuje jej wartość i stan systemu. Diody oznaczają normalną temperaturę, ostrzeżenie lub stan krytyczny, przy którym włącza się buzzer.

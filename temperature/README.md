@@ -1,0 +1,1 @@
+﻿To jest system, który mierzy temperaturę czujnikiem DHT22. Pokrętłem można ustawić próg alarmu, a diody pokazują, czy jest chłodno, ciepło czy bardzo gorąco. Po przekroczeniu ustawionego progu buzzer odtwarza melodię.

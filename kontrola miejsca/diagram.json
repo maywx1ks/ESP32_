@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-hc-sr04", "id": "ultrasonic1", "top": -36.9, "left": -205.7, "attrs": {} },
+    { "type": "wokwi-hc-sr04", "id": "ultrasonic2", "top": 203.1, "left": -196.1, "attrs": {} },
+    { "type": "wokwi-hc-sr04", "id": "ultrasonic3", "top": 78.3, "left": -205.7, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -99.6,
+      "left": -34.6,
+      "attrs": { "color": "red" }
+    },
+    { "type": "wokwi-led", "id": "led2", "top": -99.6, "left": 13.4, "attrs": { "color": "red" } },
+    { "type": "wokwi-led", "id": "led3", "top": -99.6, "left": 61.4, "attrs": { "color": "red" } },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd1",
+      "top": 256,
+      "left": 24.8,
+      "attrs": { "pins": "i2c" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "ultrasonic1:TRIG", "esp:5", "green", [ "v9.6", "h105.2", "v-76.8", "h134.4", "v124.8" ] ],
+    [ "ultrasonic3:TRIG", "esp:17", "green", [ "v9.6", "h105.2", "v-192", "h134.4", "v134.4" ] ],
+    [ "ultrasonic2:TRIG", "esp:4", "green", [ "v9.6", "h95.6", "v-316.8", "h134.4", "v153.6" ] ],
+    [ "ultrasonic1:GND", "esp:GND.1", "black", [ "v9.6", "h94.8", "v86.4" ] ],
+    [ "ultrasonic3:GND", "esp:GND.1", "black", [ "v9.6", "h94.8", "v-28.8" ] ],
+    [ "ultrasonic2:GND", "esp:GND.1", "black", [ "v9.6", "h85.2", "v-153.6" ] ],
+    [ "ultrasonic1:ECHO", "esp:18", "green", [ "v9.6", "h95.2", "v-76.8", "h134.4", "v115.2" ] ],
+    [ "ultrasonic3:ECHO", "esp:16", "green", [ "v9.6", "h95.2", "v-192", "h134.4", "v144" ] ],
+    [ "ultrasonic2:ECHO", "esp:2", "green", [ "v9.6", "h85.6", "v-316.8", "h134.4", "v172.8" ] ],
+    [ "led1:A", "esp:25", "green", [ "v0" ] ],
+    [ "led2:A", "esp:26", "green", [ "v28.8", "h-48", "v144" ] ],
+    [ "led3:A", "esp:27", "green", [ "v28.8", "h-96", "v153.6" ] ],
+    [ "esp:GND.1", "led1:C", "black", [ "h0" ] ],
+    [ "esp:GND.1", "led2:C", "black", [ "h-23.81", "v-201.6", "h48" ] ],
+    [ "esp:GND.1", "led3:C", "black", [ "h-23.81", "v-201.6", "h96" ] ],
+    [ "lcd1:SDA", "esp:21", "green", [ "h-19.2", "v-76.6", "h115.2", "v-182.4" ] ],
+    [ "lcd1:SCL", "esp:22", "green", [ "h-19.2", "v-86.1", "h115.2", "v-182.4" ] ],
+    [ "lcd1:GND", "esp:GND.3", "black", [ "h-9.6", "v-48", "h96", "v-153.6" ] ]
+  ],
+  "dependencies": {}
+}

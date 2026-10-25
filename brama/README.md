@@ -1,0 +1,1 @@
+﻿Schemat automatycznej bramy zbudowany na ESP32. Zielony przycisk rozpoczyna otwieranie, a czerwony zatrzymuje bramę w ruchu. Diody pokazują, czy brama jest zamknięta, porusza się czy jest otwarta, a buzzer gra podczas ruchu

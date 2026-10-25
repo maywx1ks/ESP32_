@@ -1,0 +1,1 @@
+﻿Schemat alarmowy sterowany kodem z klawiatury. Po wpisaniu poprawnego kodu można włączyć lub wyłączyć czuwanie. Gdy system czuwa, czujniki ruchu, odległości i temperatury wykrywają zagrożenie, a alarm pokazują dioda, buzzer i ekran LCD.

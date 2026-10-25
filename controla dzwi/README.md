@@ -1,0 +1,1 @@
+﻿Schemat drzwi sterowanych przyciskiem i serwem. Po naciśnięciu przycisku serwo odblokowuje drzwi, zielona dioda pokazuje, że są otwarte, a po kilku sekundach drzwi zamykają się automatycznie. Czerwona dioda i buzzer sygnalizują alarm.
